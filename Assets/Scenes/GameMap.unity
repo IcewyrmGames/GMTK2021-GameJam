@@ -123,6 +123,153 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &78417148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78417149}
+  - component: {fileID: 78417151}
+  - component: {fileID: 78417150}
+  m_Layer: 0
+  m_Name: Railway1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78417149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78417148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1648111572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78417150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78417148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f217e21a82641e78b139b54fb9971f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+--- !u!120 &78417151
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78417148}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Positions:
+  - {x: -5.232692, y: -5.3191457, z: 0}
+  - {x: -1.43, y: -1.33, z: 0}
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 1
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 0
+    shadowBias: 0.5
+    generateLightingData: 0
+  m_UseWorldSpace: 1
+  m_Loop: 0
 --- !u!1 &150220596
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +280,8 @@ GameObject:
   m_Component:
   - component: {fileID: 150220597}
   - component: {fileID: 150220598}
+  - component: {fileID: 150220599}
+  - component: {fileID: 150220600}
   m_Layer: 0
   m_Name: City1 - Yellow
   m_TagString: Untagged
@@ -194,7 +343,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
     type: 3}
   m_Color: {r: 1, g: 0.82291776, b: 0.16509432, a: 1}
@@ -207,6 +356,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &150220599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150220596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 0}
+  connections:
+  - settlement: {fileID: 850464345}
+    railway: {fileID: 78417150}
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 2
+  stateColors:
+  - unhovered: {r: 1, g: 0.8235294, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.94718313, b: 0.75, a: 1}
+  - unhovered: {r: 1, g: 0.8235294, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.9490196, b: 0.7490196, a: 1}
+  - unhovered: {r: 1, g: 0.8235294, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.9490196, b: 0.7490196, a: 1}
+--- !u!58 &150220600
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150220596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &564835874
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564835874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.32, y: 2.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 651658203}
@@ -4981,6 +5172,8 @@ GameObject:
   m_Component:
   - component: {fileID: 595737992}
   - component: {fileID: 595737993}
+  - component: {fileID: 595737994}
+  - component: {fileID: 595737995}
   m_Layer: 0
   m_Name: City6 - Teal
   m_TagString: Untagged
@@ -5055,6 +5248,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &595737994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595737991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 0}
+  connections: []
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 0
+  stateColors:
+  - unhovered: {r: 0.16470589, g: 1, b: 0.9490196, a: 1}
+    hovered: {r: 0.71809363, g: 0.9339623, b: 0.9207872, a: 1}
+  - unhovered: {r: 0.16470589, g: 1, b: 0.9490196, a: 1}
+    hovered: {r: 0.7176471, g: 0.93333334, b: 0.92156863, a: 1}
+  - unhovered: {r: 0.16470589, g: 1, b: 0.9490196, a: 1}
+    hovered: {r: 0.7176471, g: 0.93333334, b: 0.92156863, a: 1}
+--- !u!58 &595737995
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595737991}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &603742578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +5341,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9.81
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5132,7 +5365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603742578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 4.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25400,7 +25633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628634181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9073079, y: 2.3991456, z: -8.214254}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 150220597}
@@ -25455,7 +25688,7 @@ Transform:
   - {fileID: 564835875}
   - {fileID: 615118490}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850464342
 GameObject:
@@ -25467,6 +25700,8 @@ GameObject:
   m_Component:
   - component: {fileID: 850464343}
   - component: {fileID: 850464344}
+  - component: {fileID: 850464345}
+  - component: {fileID: 850464346}
   m_Layer: 0
   m_Name: City2 - Orange
   m_TagString: Untagged
@@ -25482,7 +25717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850464342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.17, y: -1.0791456, z: 8.214254}
+  m_LocalPosition: {x: -1.43, y: -1.33, z: 8.214254}
   m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_Children: []
   m_Father: {fileID: 628634182}
@@ -25528,7 +25763,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
     type: 3}
   m_Color: {r: 1, g: 0.5687999, b: 0.16470587, a: 1}
@@ -25541,6 +25776,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &850464345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850464342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 78417150}
+  connections:
+  - settlement: {fileID: 1663226628}
+    railway: {fileID: 0}
+  - settlement: {fileID: 1889577430}
+    railway: {fileID: 0}
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 1
+  stateColors:
+  - unhovered: {r: 1, g: 0.5686275, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.77345204, b: 0.5613208, a: 1}
+  - unhovered: {r: 1, g: 0.5686275, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.77254903, b: 0.56078434, a: 1}
+  - unhovered: {r: 1, g: 0.5686275, b: 0.16470589, a: 1}
+    hovered: {r: 1, g: 0.77254903, b: 0.56078434, a: 1}
+--- !u!58 &850464346
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850464342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
+--- !u!1 &1648111571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648111572}
+  m_Layer: 0
+  m_Name: Railroads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648111572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648111571}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9073079, y: 2.3991456, z: -8.214254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 78417149}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1663226625
 GameObject:
   m_ObjectHideFlags: 0
@@ -25551,6 +25861,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1663226626}
   - component: {fileID: 1663226627}
+  - component: {fileID: 1663226628}
+  - component: {fileID: 1663226629}
   m_Layer: 0
   m_Name: City3 - Blue
   m_TagString: Untagged
@@ -25625,6 +25937,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1663226628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663226625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 0}
+  connections:
+  - settlement: {fileID: 2038236456}
+    railway: {fileID: 0}
+  - settlement: {fileID: 595737994}
+    railway: {fileID: 0}
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 0
+  stateColors:
+  - unhovered: {r: 0.22745098, g: 0.5529412, b: 0.8784314, a: 1}
+    hovered: {r: 0.621173, g: 0.7775677, b: 0.9339623, a: 1}
+  - unhovered: {r: 0.22745098, g: 0.5529412, b: 0.8784314, a: 1}
+    hovered: {r: 0.61960787, g: 0.7764706, b: 0.93333334, a: 1}
+  - unhovered: {r: 0.22745098, g: 0.5529412, b: 0.8784314, a: 1}
+    hovered: {r: 0.61960787, g: 0.7764706, b: 0.93333334, a: 1}
+--- !u!58 &1663226629
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663226625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &1889577427
 GameObject:
   m_ObjectHideFlags: 0
@@ -25635,6 +25991,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1889577428}
   - component: {fileID: 1889577429}
+  - component: {fileID: 1889577430}
+  - component: {fileID: 1889577431}
   m_Layer: 0
   m_Name: City4 - Pink
   m_TagString: Untagged
@@ -25709,6 +26067,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1889577430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889577427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 0}
+  connections: []
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 0
+  stateColors:
+  - unhovered: {r: 0.8509804, g: 0.43137255, b: 0.6039216, a: 1}
+    hovered: {r: 0.9433962, g: 0.743147, b: 0.82549244, a: 1}
+  - unhovered: {r: 0.8509804, g: 0.43137255, b: 0.6039216, a: 1}
+    hovered: {r: 0.94509804, g: 0.74509805, b: 0.827451, a: 1}
+  - unhovered: {r: 0.8509804, g: 0.43137255, b: 0.6039216, a: 1}
+    hovered: {r: 0.94509804, g: 0.74509805, b: 0.827451, a: 1}
+--- !u!58 &1889577431
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889577427}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &2038236453
 GameObject:
   m_ObjectHideFlags: 0
@@ -25719,6 +26117,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2038236454}
   - component: {fileID: 2038236455}
+  - component: {fileID: 2038236456}
+  - component: {fileID: 2038236457}
   m_Layer: 0
   m_Name: City5 - Purple
   m_TagString: Untagged
@@ -25793,3 +26193,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2038236456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038236453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43375e3d270bb4699899a8493b4dfa5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leadingRailway: {fileID: 0}
+  connections: []
+  linkedStitch: 
+  linkedVariable: 
+  initialState: 0
+  stateColors:
+  - unhovered: {r: 0.6313726, g: 0.28235295, b: 0.627451, a: 1}
+    hovered: {r: 0.9056604, g: 0.7305091, b: 0.9036924, a: 1}
+  - unhovered: {r: 0.6313726, g: 0.28235295, b: 0.627451, a: 1}
+    hovered: {r: 0.90588236, g: 0.7294118, b: 0.9019608, a: 1}
+  - unhovered: {r: 0.6313726, g: 0.28235295, b: 0.627451, a: 1}
+    hovered: {r: 0.90588236, g: 0.7294118, b: 0.9019608, a: 1}
+--- !u!58 &2038236457
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038236453}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
