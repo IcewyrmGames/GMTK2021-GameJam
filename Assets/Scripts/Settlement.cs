@@ -9,11 +9,13 @@ public enum SettlementState {
 	MAX
 }
 
+[System.Serializable]
 public struct StateColor {
 	public Color unhovered;
 	public Color hovered;
 }
 
+[System.Serializable]
 public struct ConnectedSettlement {
 	public Settlement settlement;
 	public Railway railway;
