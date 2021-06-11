@@ -41,13 +41,17 @@ public class Settlement : MonoBehaviour {
 	SettlementState state;
 	bool hovered = false;
 
-	void Start() {
+	void Awake() {
 		sprite = GetComponent<SpriteRenderer>();
+	}
 
+	void Start() {
 		UpdateState(initialState, false);
 
-		IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
-		reader.ObserveVariable(linkedVariable, OnVariableChanged);
+		if (!string.IsNullOrEmpty(linkedVariable)) {
+			IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
+			reader.ObserveVariable(linkedVariable, OnVariableChanged);
+		}
 	}
 
 	void OnMouseEnter() {
@@ -59,7 +63,7 @@ public class Settlement : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (state == SettlementState.Available) {
+		if (state == SettlementState.Available && !string.IsNullOrEmpty(linkedStitch)) {
 			IceWyrm.StoryReader.instance.JumpToStitch(linkedStitch);
 		}
 	}

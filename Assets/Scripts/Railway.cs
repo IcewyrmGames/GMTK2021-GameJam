@@ -9,7 +9,7 @@ public class Railway : MonoBehaviour {
 	[EnumNamedArray(typeof(SettlementState))]
 	[SerializeField] Color[] stateColors = new Color[(int)SettlementState.MAX];
 
-	void Start() {
+	void Awake() {
 		line = GetComponent<LineRenderer>();
 	}
 
