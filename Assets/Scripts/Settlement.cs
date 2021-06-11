@@ -33,7 +33,7 @@ public class Settlement : MonoBehaviour {
 
 	[SerializeField] SettlementState initialState;
 
-	[EnumNamedArray(typeof(SettlementState))]
+	//[EnumNamedArray(typeof(SettlementState))]
 	[SerializeField] StateColor[] stateColors = new StateColor[(int)SettlementState.MAX];
 
 	SpriteRenderer sprite;
