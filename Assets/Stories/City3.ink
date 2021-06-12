@@ -43,10 +43,9 @@ Any challenge that may arise, I assure you that we'll be more than capable of fa
 	* Incredible[!], it's hard to imagine coming from such a harsh place!
 	* Hard to believe[...] but I have no doubt that you are a capable people.
 - Indeed. What brings you around to these parts?
-	* [I have a business proposition] Well, I have a business proposition, if you're interested
-		-> Proposition
-	* Just passing through[], thought I might take a look around the area
-		-> MainQuestions
+	* I heard the stories about you[.], I'm glad to see the truth of them!
+	* I'm learning more about settlements in the area[.], thought I might take a look around.
+- ->MainQuestions
 
 = TornsburgArea
 Tornsburg is in rocky lands, but ye'll be hard-pressed to find a more rich place.
