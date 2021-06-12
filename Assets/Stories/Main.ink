@@ -1,3 +1,4 @@
+VAR City1Complete = false
 VAR City2Complete = false
 VAR City3Complete = false
 VAR City4Complete = false
@@ -9,6 +10,7 @@ VAR City6Visit = false
 VAR City5Conflict = false
 VAR City6Conflict = false
 
+-> City1
 INCLUDE City1.ink
 INCLUDE City2.ink
 INCLUDE City3.ink
