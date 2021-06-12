@@ -95,7 +95,12 @@ public class StoryUI : MonoBehaviour {
 
 	public void OnStoryEnded() {
 		gameObject.SetActive(false);
-		//blur.SetActive(false);
+
+		SetChoiceButtons(new List<IceWyrm.StoryChoice>());
+		foreach (StoryScrollTextBox textBox in textBoxes) {
+			Destroy(textBox.gameObject);
+		}
+		textBoxes.Clear();
 	}
 
 	void AddTextBox(string prefix, string text) {
