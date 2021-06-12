@@ -5,17 +5,19 @@
 // entrance
 // city2_complete
 
-You make your way to city 2.
+s: You make your way to city 2.
 -> Entrance
 
 = Entrance
 
-Has: Metallurgical-grade coal
-Needs: Earth Snacks
-In a low mountainous area. Has access to coal.
-Convince them by reassuring them there will be easy trade with city 1.
-Indicates city 3 is near higher mountains.
-Indicates city 4 is down near arable farmlands.
+s: Has: Metallurgical-grade coal
+s: Needs: Earth Snacks
+s: In a low mountainous area. Has access to coal.
+
+* n: Convince them by reassuring them there will be easy trade with city 1.
+
+s: Indicates city 3 is near higher mountains.
+s: Indicates city 4 is down near arable farmlands.
 
 -> CompleteCity
 
