@@ -40,7 +40,8 @@ public class Settlement : MonoBehaviour {
 
 	SettlementState state;
 	bool hovered = false;
-	bool allowClick = true;
+
+	SettlementState pendingState;
 
 	void Awake() {
 		sprite = GetComponent<SpriteRenderer>();
@@ -66,17 +67,20 @@ public class Settlement : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (allowClick && state == SettlementState.Available && !string.IsNullOrEmpty(linkedStitch)) {
+		if (enabled && state == SettlementState.Available && !string.IsNullOrEmpty(linkedStitch)) {
 			IceWyrm.StoryReader.instance.JumpToStitch(linkedStitch);
 		}
 	}
 
 	void OnStoryUpdated(IceWyrm.StoryView view) {
-		allowClick = false;
+		enabled = false;
 	}
 
 	void OnStoryEnded() {
-		allowClick = true;
+		enabled = true;
+		if (pendingState != state) {
+			UpdateState(pendingState, hovered);
+		}
 	}
 
 	void OnVariableChanged(string variable, object newValue) {
@@ -89,6 +93,11 @@ public class Settlement : MonoBehaviour {
 	}
 
 	void UpdateState(SettlementState newState, bool newHovered) {
+		if (!enabled) {
+			pendingState = newState;
+			return;
+		}
+
 		state = newState;
 		hovered = newHovered;
 
@@ -101,9 +110,9 @@ public class Settlement : MonoBehaviour {
 		if (newState == SettlementState.Completed) {
 			if (leadingRailway) leadingRailway.ShowState(SettlementState.Completed);
 
-			foreach (ConnectedSettlement connected in connections) {
-				connected.railway.ShowState(SettlementState.Available);
-				connected.settlement.MakeAvailable();
+			foreach (ConnectedSettlement connection in connections) {
+				if (connection.railway) connection.railway.ShowState(SettlementState.Available);
+				if (connection.settlement) connection.settlement.MakeAvailable();
 			}
 		}
 	}
