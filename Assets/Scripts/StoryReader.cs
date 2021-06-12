@@ -161,6 +161,12 @@ namespace IceWyrm {
 			story.RemoveVariableObserver(observer, null);
 		}
 
+		public object GetVariable(string variable) {
+			Ink.Runtime.Value value = story.variablesState.GetVariableWithName(variable) as Ink.Runtime.Value;
+			if (value) return value.valueObject;
+			else return null;
+		}
+
 		//Create a new story object for the compiled story, which will reset all state and progress.
 		bool InitStory(string text) {
 			if (!string.IsNullOrEmpty(text)) {
