@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum SettlementState {
 	Locked,
@@ -35,8 +36,10 @@ public class Settlement : MonoBehaviour {
 
 	//[EnumNamedArray(typeof(SettlementState))]
 	[SerializeField] StateColor[] stateColors = new StateColor[(int)SettlementState.MAX];
+	[SerializeField] float hoverScale = 1.6f;
 
 	SpriteRenderer sprite;
+	float originalScale = 1.0f;
 
 	SettlementState state;
 	bool hovered = false;
@@ -48,6 +51,8 @@ public class Settlement : MonoBehaviour {
 	}
 
 	void Start() {
+		originalScale = sprite.transform.localScale.x;
+
 		UpdateState(initialState, false);
 
 		IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
@@ -60,10 +65,12 @@ public class Settlement : MonoBehaviour {
 
 	void OnMouseEnter() {
 		UpdateState(state, true);
+		sprite.transform.DOScale(hoverScale, 0.2f);
 	}
 
 	void OnMouseExit() {
 		UpdateState(state, false);
+		sprite.transform.DOScale(originalScale, 0.2f);
 	}
 
 	void OnMouseDown() {
@@ -74,6 +81,7 @@ public class Settlement : MonoBehaviour {
 
 	void OnStoryUpdated(IceWyrm.StoryView view) {
 		enabled = false;
+		UpdateState(state, false);
 	}
 
 	void OnStoryEnded() {
@@ -98,21 +106,33 @@ public class Settlement : MonoBehaviour {
 			return;
 		}
 
-		state = newState;
-		hovered = newHovered;
+		if (hovered != newHovered) {
+			hovered = newHovered;
 
-		if (hovered) {
-			sprite.color = stateColors[(int)state].hovered;
-		} else {
-			sprite.color = stateColors[(int)state].unhovered;
+			if (hovered) {
+				sprite.color = stateColors[(int)state].hovered;
+			} else {
+				sprite.color = stateColors[(int)state].unhovered;
+			}
 		}
 
-		if (newState == SettlementState.Completed) {
-			if (leadingRailway) leadingRailway.ShowState(SettlementState.Completed);
+		if (state != newState) {
+			state = newState;
+			pendingState = newState;
 
-			foreach (ConnectedSettlement connection in connections) {
-				if (connection.railway) connection.railway.ShowState(SettlementState.Available);
-				if (connection.settlement) connection.settlement.MakeAvailable();
+			if (newState == SettlementState.Completed) {
+				sprite.transform.localScale = Vector3.one * originalScale;
+				sprite.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1.0f);
+
+				if (leadingRailway) leadingRailway.ShowState(SettlementState.Completed);
+
+				foreach (ConnectedSettlement connection in connections) {
+					if (connection.railway) connection.railway.ShowState(SettlementState.Available);
+					if (connection.settlement) connection.settlement.MakeAvailable();
+				}
+
+			} else if (newState == SettlementState.Available) {
+				sprite.transform.DOShakeRotation(0.5f, new Vector3(0,0,1), 2, 1.0f, true);
 			}
 		}
 	}
