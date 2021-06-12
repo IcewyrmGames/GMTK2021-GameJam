@@ -12,9 +12,6 @@ n: "Oh. You have arrived."
 
 n: "Welcome to the {cityName}, where the plants whisper to us their needs."
 
-
-
-
 // STITCHES:
 //
 // entrance
@@ -25,13 +22,14 @@ n: "Welcome to the {cityName}, where the plants whisper to us their needs."
 
 = Entrance
 
-s: City 4
-s: Has: Arable Farmlands
-s: Needs: Steel
-s: In some lower, arable meadowlands
-s: Wants to create an industrial food production setup, but needs steel to create the machinery for it.
+//s: City 4
+//s: Has: Arable Farmlands
+//s: Needs: Steel
+//s: In some lower, arable meadowlands
+//s: Wants to create an industrial food production setup, but needs steel to create the machinery for it.
 
 * p: Convince them by indicating they'll have access to the steel from city 3.
+
 -> CompleteCity
 
 = CompleteCity
