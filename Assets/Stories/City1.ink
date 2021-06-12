@@ -1,7 +1,3 @@
-VAR City1Name = "Port of Nevosis" 
-VAR City1Leader = "Digby"
-VAR BeNiceToCity1Leader = 0
-
 === City1 ===
 -> Touchdown
 
