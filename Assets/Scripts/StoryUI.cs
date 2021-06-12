@@ -107,6 +107,7 @@ public class StoryUI : MonoBehaviour {
 		StoryScrollTextBox prefab = FindTextBoxPrefab(prefix);
 
 		StoryScrollTextBox block = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+		block.gameObject.SetActive(true);
 		block.transform.SetParent(textBoxPanel.transform, false);
 		block.text = text;
 		textBoxes.Add(block);
