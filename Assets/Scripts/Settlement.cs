@@ -124,10 +124,10 @@ public class Settlement : MonoBehaviour {
 				sprite.transform.localScale = Vector3.one * originalScale;
 				sprite.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1.0f);
 
-				if (leadingRailway) leadingRailway.ShowState(SettlementState.Completed);
+				if (leadingRailway) leadingRailway.ShowState(SettlementState.Available, SettlementState.Completed);
 
 				foreach (ConnectedSettlement connection in connections) {
-					if (connection.railway) connection.railway.ShowState(SettlementState.Available);
+					if (connection.railway) connection.railway.ShowState(SettlementState.Locked, SettlementState.Available);
 					if (connection.settlement) connection.settlement.MakeAvailable();
 				}
 

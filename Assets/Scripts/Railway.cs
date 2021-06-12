@@ -13,8 +13,7 @@ public class Railway : MonoBehaviour {
 		line = GetComponent<LineRenderer>();
 	}
 
-	public void ShowState(SettlementState state) {
-		line.startColor = stateColors[(int)state];
-		line.endColor = stateColors[(int)state];
+	public void ShowState(SettlementState prevState, SettlementState newState) {
+		line.DOColor(stateColors[(int)prevState], stateColors[(int)newState], 0.5f);
 	}
 }
