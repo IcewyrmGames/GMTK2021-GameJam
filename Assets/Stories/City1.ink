@@ -1,13 +1,11 @@
-VAR cityname = "Port of Nevosis" 
-VAR leader = "Digby"
-VAR BeNiceToLeader = 0
-
 === City1 ===
-
+~ temp cityName = "Port of Nevosis" 
+~ temp leader = "Digby"
+~ temp BeNiceToLeader = 0
 -> Touchdown
 
 = Touchdown
-s: Your ship touches down. This is it - the {cityname}. 
+s: Your ship touches down. This is it - the {cityName}. 
 s: The door of your ship opens. A lithe, anxious seeming middle aged man rushes to your door, followed by a small flock of people. They turn gawk at the side of the ship, where "Trailway Railways & Trade" is painted boldly.
 
 n: "Hello!! Hello, how are you, how was the airspace, how are you doing - it is absolutely WONDEROUS to see you."
@@ -21,7 +19,7 @@ n: "Hello!! Hello, how are you, how was the airspace, how are you doing - it is 
     ~ BeNiceToLeader--
     -- n: His face falls. "Oh. Yes, of course."
 - s: He starts walking towards the settlement and beckons you to follow. He passes several buildings, pointing out their usefulness until you arrive at a small nest of apartment pods.
-- n: "This is where you will be staying while you are at the {cityname}, and shall you need anything at all, just use the intercom and someone will be  there to assist you!"
+- n: "This is where you will be staying while you are at the {cityName}, and shall you need anything at all, just use the intercom and someone will be  there to assist you!"
 ->nextDay
 
 = nextDay
