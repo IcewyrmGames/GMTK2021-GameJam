@@ -56,11 +56,14 @@ public class Settlement : MonoBehaviour {
 		UpdateState(initialState, false);
 
 		IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
-		if (!string.IsNullOrEmpty(linkedVariable)) {
-			reader.ObserveVariable(linkedVariable, OnVariableChanged);
-		}
 		reader.storyUpdated.AddListener(OnStoryUpdated);
 		reader.storyEnded.AddListener(OnStoryEnded);
+
+		if (reader.IsInitialized()) {
+			OnStoryInitialized();
+		} else {
+			reader.storyInitialized.AddListener(OnStoryInitialized);
+		}
 	}
 
 	void OnMouseEnter() {
@@ -79,6 +82,13 @@ public class Settlement : MonoBehaviour {
 		}
 	}
 
+	void OnStoryInitialized() {
+		IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
+		if (!string.IsNullOrEmpty(linkedVariable)) {
+			reader.ObserveVariable(linkedVariable, OnVariableChanged);
+		}
+	}
+
 	void OnStoryUpdated(IceWyrm.StoryView view) {
 		enabled = false;
 		UpdateState(state, false);
@@ -92,16 +102,19 @@ public class Settlement : MonoBehaviour {
 	}
 
 	void OnVariableChanged(string variable, object newValue) {
-		bool newBoolValue = (bool)newValue;
-		UpdateState(newBoolValue ? SettlementState.Completed : SettlementState.Locked, hovered);
+		if (variable == linkedVariable) {
+			bool newBoolValue = (bool)newValue;
+			UpdateState(newBoolValue ? SettlementState.Completed : SettlementState.Locked, hovered, true);
+		}
 	}
 
 	public void MakeAvailable() {
 		UpdateState(SettlementState.Available, hovered);
 	}
 
-	void UpdateState(SettlementState newState, bool newHovered) {
-		if (!enabled) {
+	void UpdateState(SettlementState newState, bool newHovered, bool allowPending = false) {
+		if (!enabled && allowPending && newState != state) {
+			Debug.Log("Pending state " + newState + name);
 			pendingState = newState;
 			return;
 		}
@@ -121,6 +134,7 @@ public class Settlement : MonoBehaviour {
 			pendingState = newState;
 
 			if (newState == SettlementState.Completed) {
+				Debug.Log("Completed" + name);
 				sprite.transform.localScale = Vector3.one * originalScale;
 				sprite.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1.0f);
 

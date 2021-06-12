@@ -23,6 +23,8 @@ namespace IceWyrm {
 		//Whether the story is currently in progress, or has been ended
 		public bool isInProgress { get; private set; }
 
+		//Fired when the story is initialized
+		public UnityEvent storyInitialized;
 		//Fired when the story is updated in some way
 		public StoryViewEvent storyUpdated;
 		//Fired when the story reaches a point where there is nowhere left to go
@@ -80,6 +82,8 @@ namespace IceWyrm {
 		void OnHotReload() {
 			instance = this;
 		}
+
+		public bool IsInitialized() { return !!story; }
 
 		public StoryView GetCurrentView() {
 			if (story) {
