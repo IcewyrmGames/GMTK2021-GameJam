@@ -12,7 +12,7 @@
 - Your ship touches down. This is it - the Port of Nevosis. 
 - The door of your ship opens and a lithe, anxious seeming middle aged man rushes to your door, followed by a small flock of people. They turn to the ship, gawking at it's side, where the words "Trailway Railways & Trade" are boldly painted on the side.
 
-- "Wendy!! Wendy, how are you, how was the airspace, how are you doing - it is absolutely WONDEROUS to see you."
+- "Hello!! Hello, how are you, how was the airspace, how are you doing - it is absolutely WONDEROUS to see you."
 
     * "Hello there Digby. I see you are energetic as always!"
 
