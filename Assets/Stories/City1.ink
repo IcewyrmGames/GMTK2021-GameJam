@@ -33,7 +33,6 @@
 = CompleteCity
 
 City1 is now complete for trade! And you are ready to go.
-~ City1Complete = true
 
 -> END
 
