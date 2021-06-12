@@ -116,9 +116,9 @@ What are ye offering, that ye think we need?
 = SteelProduction
 Now that's an idea, and one we've thought of before, but we haven't the resources to do something like that.
 Ye need a steady supply of good coal to make steel.
-	* Coal is something I can provide[.], <City2> has already agreed to join our rail network.
-	* I think I have what you need[.], have you heard of <City2>? We've already set up rail lines there.
-- <City2>! They've joined you already? Now that is an interesting fact...
+	* Coal is something I can provide[.], Gwuff Hills has already agreed to join our rail network.
+	* I think I have what you need[.], have you heard of Gruff Hills? We've already set up rail lines there.
+- Gwuff Hills! They've joined you already? Now that is an interesting fact...
 {City3BadExits < 1: Ha, this isn't yer first negotiation, is it!|Yer lucky to have such good tactics to make up for yer lack of tact.} People like ye know te come prepared already!
 Alright, friend. If joining your network means access to coal, we can set up a steel industry right here in Tornsburg.
 ~ City3Complete = true
