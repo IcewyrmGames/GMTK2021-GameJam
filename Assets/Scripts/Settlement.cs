@@ -104,7 +104,7 @@ public class Settlement : MonoBehaviour {
 	void OnVariableChanged(string variable, object newValue) {
 		if (variable == linkedVariable) {
 			bool newBoolValue = (bool)newValue;
-			UpdateState(newBoolValue ? SettlementState.Completed : SettlementState.Locked, hovered, true);
+			UpdateState(newBoolValue ? SettlementState.Completed : SettlementState.Locked, hovered, false);
 		}
 	}
 
@@ -112,9 +112,8 @@ public class Settlement : MonoBehaviour {
 		UpdateState(SettlementState.Available, hovered);
 	}
 
-	void UpdateState(SettlementState newState, bool newHovered, bool allowPending = false) {
-		if (!enabled && allowPending && newState != state) {
-			Debug.Log("Pending state " + newState + name);
+	void UpdateState(SettlementState newState, bool newHovered, bool immediate = true) {
+		if (!enabled && !immediate && newState != state) {
 			pendingState = newState;
 			return;
 		}
@@ -134,7 +133,6 @@ public class Settlement : MonoBehaviour {
 			pendingState = newState;
 
 			if (newState == SettlementState.Completed) {
-				Debug.Log("Completed" + name);
 				sprite.transform.localScale = Vector3.one * originalScale;
 				sprite.transform.DOPunchScale(Vector3.one, 0.5f, 2, 1.0f);
 
