@@ -46,6 +46,7 @@ namespace IceWyrm {
 				reloadStoryText = compiledStory.text;
 #endif
 			}
+			storyInitialized.Invoke();
 		}
 
 		void OnEnable() {

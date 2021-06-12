@@ -124,19 +124,13 @@ public class Settlement : MonoBehaviour {
 			return;
 		}
 
-		if (hovered != newHovered) {
-			hovered = newHovered;
-
-			if (hovered) {
-				sprite.color = stateColors[(int)state].hovered;
-			} else {
-				sprite.color = stateColors[(int)state].unhovered;
-			}
-		}
+		hovered = newHovered;
 
 		if (state != newState) {
 			state = newState;
 			pendingState = newState;
+
+			Debug.Log(name + " State " + newState);
 
 			if (newState == SettlementState.Completed) {
 				sprite.transform.localScale = Vector3.one * originalScale;
@@ -152,6 +146,13 @@ public class Settlement : MonoBehaviour {
 			} else if (newState == SettlementState.Available) {
 				sprite.transform.DOShakeRotation(0.5f, new Vector3(0,0,1), 2, 1.0f, true);
 			}
+		}
+
+		//Always update color values
+		if (hovered) {
+			sprite.color = stateColors[(int)state].hovered;
+		} else {
+			sprite.color = stateColors[(int)state].unhovered;
 		}
 	}
 }
