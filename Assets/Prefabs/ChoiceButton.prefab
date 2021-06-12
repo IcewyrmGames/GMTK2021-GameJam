@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7019608, g: 1, b: 0.9647059, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -119,9 +119,9 @@ MonoBehaviour:
   textComponent: {fileID: 2075240182339517761}
   imageComponent: {fileID: 2075240180674279479}
   textColor: {r: 0, g: 0, b: 0, a: 1}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: 0.7019608, g: 1, b: 0.9647059, a: 0.39215687}
   textHoverColor: {r: 0, g: 0, b: 0, a: 1}
-  backgroundHoverColor: {r: 0.5613208, g: 0.61330706, b: 1, a: 1}
+  backgroundHoverColor: {r: 0.3254717, g: 1, b: 0.9201216, a: 0.39215687}
 --- !u!1 &2075240182339517775
 GameObject:
   m_ObjectHideFlags: 0
