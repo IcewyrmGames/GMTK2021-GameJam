@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(LineRenderer))]
 public class Railway : MonoBehaviour {
@@ -14,6 +15,8 @@ public class Railway : MonoBehaviour {
 	}
 
 	public void ShowState(SettlementState prevState, SettlementState newState) {
-		line.DOColor(stateColors[(int)prevState], stateColors[(int)newState], 0.5f);
+		Color prevColor = stateColors[(int)prevState];
+		Color newColor = stateColors[(int)newState];
+		line.DOColor(new Color2(prevColor, prevColor), new Color2(newColor, newColor), 0.5f);
 	}
 }
