@@ -1,6 +1,3 @@
-VAR City2Name = "Gwuff Hills" 
-VAR City2Leader = "Elvira"
-
 === City2 ===
 
 // STITCHES:
