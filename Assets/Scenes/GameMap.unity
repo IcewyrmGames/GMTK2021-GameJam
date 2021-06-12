@@ -427,8 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5054cd5445c63484fb550525bf5df3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compiledStory: {fileID: 4900000, guid: c3ef92e3a732a48bbb5b842754e2e34d, type: 3}
-  playOnStart: 1
+  compiledStory: {fileID: 4900000, guid: f5f073d0f41004b469289a5a56bde694, type: 3}
+  playOnStart: 0
   useMaximalContinue: 0
   storyUpdated:
     m_PersistentCalls:
@@ -26764,9 +26764,9 @@ MonoBehaviour:
     railway: {fileID: 0}
   - settlement: {fileID: 595737994}
     railway: {fileID: 0}
-  linkedStitch: 
-  linkedVariable: 
-  initialState: 0
+  linkedStitch: City3
+  linkedVariable: City3Complete
+  initialState: 1
   stateColors:
   - unhovered: {r: 0.22745098, g: 0.5529412, b: 0.8784314, a: 1}
     hovered: {r: 0.621173, g: 0.7775677, b: 0.9339623, a: 1}
