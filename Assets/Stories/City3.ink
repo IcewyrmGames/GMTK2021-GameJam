@@ -1,4 +1,3 @@
-VAR City3Complete = false
 VAR City3BadExits = 0
 
 === City3 ===
