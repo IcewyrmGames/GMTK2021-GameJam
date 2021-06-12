@@ -65,7 +65,9 @@ n: Oh yes, still out here trying to join up the settlements, are you? I'm sorry,
 	* {RiverOffer} p: The company will help you with the river.
 		-> RiverOfferConfirm
 	+ p: Are you sure you don't want to join?
-		-> QuiteSure
+	  n: I am quite sure, I assure you. We have no need for this rail network. Now if you'll excuse me, I have other matters to attend to.
+	  ~ City5BadExits++
+		-> END
 	+ p: Okay, nevermind.
 		-> MainQuestions
 
@@ -95,11 +97,6 @@ n: Very well, I suppose if it's a matter of life or death we need to trade more 
 	* p: We're happen to have you on board.
 - n: I can only hope that one day I feel the same.
 ~ City5Complete = true
--> END
-
-= QuiteSure
-n: I am quite sure, I assure you. We have no need for this rail network. Now if you'll excuse me, I have other matters to attend to.
-~ City5BadExits++
 -> END
 
 = RiverOffer
@@ -156,8 +153,8 @@ n: It's much better than walking around in the muck and mud all day, unlike thos
 	* {!City6Visit} p: Simpletons? Who are you talking about?
 - n: Oh, it's a tiny little group of buildings on the other side of the river.
 n: The people there are a little more... rough around the edges, if you catch my meaning.
-n: We don't mix with them when we can avoid it, though they can be a nuisance when they try to dredge the river.
-	* p: Why would they dredge the river?
+n: We don't mix with them when we can avoid it, though they can be a nuisance when they try to mine near the river.
+	* p: Why would they mine near the river?
 	* p: Why are they such a nuisance?
 - n: Oh, those simpletons have it in their mind that all the gold veins around the river belong to them.
 n: We clearly laid claim to it, but nearly every day we find they've run off our helpers that are trying to mine the gold.

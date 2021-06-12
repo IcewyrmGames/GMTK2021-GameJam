@@ -53,6 +53,12 @@ public class Settlement : MonoBehaviour {
 	void Start() {
 		originalScale = sprite.transform.localScale.x;
 
+		//The true initial state is locked, so apply that here before applying the new initial state.
+		if (initialState == SettlementState.Locked) {
+			if (leadingRailway) leadingRailway.ShowState(SettlementState.Locked, SettlementState.Locked);
+			sprite.color = stateColors[0].unhovered;
+		}
+
 		UpdateState(initialState, false);
 
 		IceWyrm.StoryReader reader = IceWyrm.StoryReader.instance;
