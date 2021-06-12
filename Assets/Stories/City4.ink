@@ -1,4 +1,4 @@
-=== city4 ===
+=== City4 ===
 
 // STITCHES:
 //
@@ -6,9 +6,9 @@
 // city2_complete
 
 You make your way to city 4.
--> entrance
+-> Entrance
 
-= entrance
+= Entrance
 
 City 4
 Has: Arable Farmlands
@@ -17,10 +17,11 @@ Needs: Steel
 - Wants to create an industrial food production setup, but needs steel to create the machinery for it.
 
 * Convince them by indicating they'll have access to the steel from city 3.
--> city4_complete
+-> CompleteCity
 
-= city4_complete
+= CompleteCity
 
-- "We are now convinced!" You have completed city 4. 
+"We are now convinced!" You have completed city 4. 
+~ City4Complete = true
 
 -> END

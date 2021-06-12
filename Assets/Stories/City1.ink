@@ -1,4 +1,4 @@
-=== city1 ===
+=== City1 ===
 
 // STITCHES:
 //
@@ -6,9 +6,9 @@
 // speaking_of_earth_snacks
 // city1_complete
 
--> touchdown
+-> Touchdown
 
-= touchdown
+= Touchdown
 - Your ship touches down. This is it - the Port of Nevosis. 
 - The door of your ship opens and a lithe, anxious seeming middle aged man rushes to your door, followed by a small flock of people. They turn to the ship, gawking at it's side, where the words "Trailway Railways & Trade" are boldly painted on the side.
 
@@ -23,16 +23,17 @@
     * "Digby, I am quite weary from travels and we have much to discuss before I call it a night. Shall we head in?"
 
 - "Oh, yes yes. Let's."
-    -> speaking_of_earth_snacks
+    -> EarthSnacks
 
-= speaking_of_earth_snacks
+= EarthSnacks
 - Digby tells you about city1 and discusses their interest in Earth snacks. You continue on to the next city with this knowledge.
     * Continue
-    -> city1_complete
+    -> CompleteCity
 
-= city1_complete
+= CompleteCity
 
-city1 is now complete for trade! And you are ready to go.
+City1 is now complete for trade! And you are ready to go.
+~ City1Complete = true
 
 -> END
 
