@@ -62,7 +62,7 @@ n: Goodbye then.
 
 = CompleteCity
 s: Gula Gwuff's face suddenly completely changes. 
-n: "DID YOU SAY EARTH SNACKS?"
+n: DID YOU SAY EARTH SNACKS?
 s: She's practically shouting.
 n: Ahem, I mean, what is this plan you say, regarding Earth Smack-Snackery?
 * p: If you join our network, I'll make sure you don't run a single day without a steady stock of Earth Snacks. 
