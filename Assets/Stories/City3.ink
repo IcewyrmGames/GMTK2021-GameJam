@@ -4,7 +4,6 @@ VAR City3BadExits = 0
 n: Welcome te Tornsburg, {City3 == 1: stranger|{~friend|traveler}}. {City3 == 1: The name's Bilge. }What can I do for ye? -> MainQuestions
 
 = MainQuestions
-<>
 * p: Bilge is an unusual name[.], isn't it?
 	-> BilgeName
 * p: Tell me about your city[.], I'm not familiar with it.
@@ -28,17 +27,17 @@ n: Clearly ye've got no sense about ye, friend. Come back when ye're ready to ta
 -> END
 
 = BilgeName
-n: Oh, and I suppose you think a name like "Steven" isn't strange, aye? Names come in all sorts, friend.
-n: Bilge is a family name, going back for generations. The Bilges are always there for others, to bail them out.
+n: Oh, and I suppose you think a name like "Steven" isn't strange, aye? Names come in all sorts, friend.<\br><>
+Bilge is a family name, going back for generations. The Bilges are always there for others, to bail them out.
 	* p: I meant no offense[.], I'm just not used to names like that.
 		-> MainQuestions
 	* p: It's still a strange name[.], you must admit.
 		-> BadExit
 
 = TornsburgInfo
-n: Ye've come to the jewel of the mountains, friend! Tornsburg is a hard place, but the people here are harder.
-n: We come from a world much less hospitable than this one. Fully of craggy ice and beasties that kill on sight.
-n: Any challenge that may arise, I assure you that we'll be more than capable of facing it.
+n: Ye've come to the jewel of the mountains, friend! Tornsburg is a hard place, but the people here are harder.<\br><>
+We come from a world much less hospitable than this one. Fully of craggy ice and beasties that kill on sight.<\br><>
+Any challenge that may arise, I assure you that we'll be more than capable of facing it.
 	* p: Impressive[!], you certainly look like people that can handle themselves.
 	* p: Incredible[!], it's hard to imagine coming from such a harsh place!
 	* p: Hard to believe[...], but I have no doubt that you are a capable people.
@@ -48,8 +47,8 @@ n: Any challenge that may arise, I assure you that we'll be more than capable of
 - ->MainQuestions
 
 = TornsburgArea
-n: Tornsburg is in rocky lands, but ye'll be hard-pressed to find a more rich place.
-n: We've laid claim to all these mountains here, and the ores within them.
+n: Tornsburg is in rocky lands, but ye'll be hard-pressed to find a more rich place.<\br><>
+We've laid claim to all these mountains here, and the ores within them.
 	* p: What kind of ores?
 		-> Ores
 	* p: Are those really that valuable?
@@ -114,12 +113,12 @@ n: What are ye offering, that ye think we need?
 		-> BadExit
 
 = SteelProduction
-n: Now that's an idea, and one we've thought of before, but we haven't the resources to do something like that.
-n: Ye need a steady supply of good coal to make steel.
+n: Now that's an idea, and one we've thought of before, but we haven't the resources to do something like that.<\br><>
+Ye need a steady supply of good coal to make steel.
 	* p: Coal is something I can provide[.], Gwuff Hills has already agreed to join our rail network.
 	* p: I think I have what you need[.], have you heard of Gruff Hills? We've already set up rail lines there.
-- n: Gwuff Hills! They've joined you already? Now that is an interesting fact...
-n: {City3BadExits < 2: Ha, this isn't yer first negotiation, is it!|Yer lucky to have such good tactics to make up for yer lack of tact.} People like ye know te come prepared already!
-n: Alright, friend. If joining your network means access to coal, we can set up a steel industry right here in Tornsburg.
+- n: Gwuff Hills! They've joined you already? Now that is an interesting fact...<\br><>
+{City3BadExits < 2: Ha, this isn't yer first negotiation, is it!|Yer lucky to have such good tactics to make up for yer lack of tact.} People like ye know te come prepared already!<\br><>
+Alright, friend. If joining your network means access to coal, we can set up a steel industry right here in Tornsburg.
 ~ City3Complete = true
 -> END
