@@ -26,7 +26,7 @@ p: This texture is... leaving something to be desired. Could you not come up wit
 * [s: Keep it positive.] p: The flavor of this meal is divine.
 ~BeNiceToCity1Leader++
     s: {City1Leader}'s face lights up.
-- n: That is our region's delicacy... fresh Moostac, caught just yesterday and brought in with a day's travel.
+- n: That is our region's delicacy... fresh Moostac, caught just yesterday and brought in with a day's travel. 
 
 { ComplainedAboutFood == true:
     -> FoodComplaint
@@ -35,13 +35,13 @@ p: This texture is... leaving something to be desired. Could you not come up wit
 }
 
 = FoodComplaint
-n: I fear we are limited in our options before trade with Earth is better established. We just don't have the same kind of infrastructure established here just yet.
+<> <\br> I fear we are limited in our options before trade with Earth is better established. We just don't have the same kind of infrastructure established here just yet.
 s: He brightens up.
 n: It won't be long though! Perhaps next time we can try something else.
 -> QuestionsAndAnswers
 
 = QuestionsAndAnswers
-{!QuestionsAndAnswers == 0: n: Well, speaking of next time, I know our time is short before you have to move on to work with the other settlements. Do you have any questions for me?}
+{QuestionsAndAnswers == 0: n: Well, speaking of next time, I know our time is short before you have to move on to work with the other settlements. Do you have any questions for me?}
 {QuestionsAndAnswers == 1: n: Do you have any more questions?}
 
 * p: What's the best way to convince the settlements to join us?
@@ -50,7 +50,7 @@ n: It won't be long though! Perhaps next time we can try something else.
         n: Well, I'm sure they just need a little more convincing. I'm sure after a little conversation it will become clear what will make them say yes.
         -> QuestionsAndAnswers
 * p: Where did you get such a fine suit?
-    n: Oh my. Why thank you. I have a wonderful tailor here, his name is Sherry, let me give you his card...
+    n: Oh my. Why thank you. I have a wonderful tailor here, their name is Sherry, let me give you their card...
     ~BeNiceToCity1Leader++
     -> QuestionsAndAnswers
 * p: No, I think I'm good. 
