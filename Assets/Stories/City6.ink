@@ -145,9 +145,9 @@ n: I'll bet some o' them other cities 'round that railroad might want some, we'l
 
 = FoodOffer
 n: Food? Hm, well, I do love me some good cooking. What're ya talking about, exactly?
-	* p: The farms in <City4> can help [.], they're part of the rail network.
-	* p: There are industrial farms [nearby.] in <City4>.
-- n: Farming? Down in <City4>? Do they got any good stuff, like corn or okra?
+	* p: The farms in Whispering Seeds can help [.], they're part of the rail network.
+	* p: There are industrial farms [nearby.] in Whispering Seeds.
+- n: Farming? Down in Whispering Seeds? Do they got any good stuff, like corn or okra?
 	* p: Lots of corn.
 	  n: Whoo-eee. It's been a while since I had any real good cornbread.
 	* p: Lots of okra.

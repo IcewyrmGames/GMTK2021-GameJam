@@ -88,8 +88,8 @@ n: Cheap food? How dare you even offer. Our food here is imported from old Earth
 	* p: You can't sustain that way of life.
 - n: I can't believe I'm even entertaining this, but I suppose you have a point.
 n: You're saying that there is a supply of cheap food in your rail network?
-	* p: You'll be able to trade with [nearby farms.]the farms in <City4>.
-	* p: There's a lot of places to trade with nearby[.], like <City4>.
+	* p: You'll be able to trade with [nearby farms.]the farms in Whispering Seeds.
+	* p: There's a lot of places to trade with nearby[.], like Whispering Seeds.
 - n: I did hear that they were recently able to step up to a large-scale farming operation...
 n: Grains and vegetables they have, I'm sure, but we would be lacking in caviar and ostrich...
 n: Very well, I suppose if it's a matter of life or death we need to trade more freely with nearby cities.

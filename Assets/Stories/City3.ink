@@ -7,7 +7,7 @@ n: Welcome te Tornsburg, {City3 == 1: stranger|{~friend|traveler}}. {City3 == 1:
 <>
 * p: Bilge is an unusual name[.], isn't it?
 	-> BilgeName
-* p: Tell me about your city[], I'm not familiar with it.
+* p: Tell me about your city[.], I'm not familiar with it.
 	-> TornsburgInfo
 * p: Can you tell me about the area?[] I'm afraid I don't know much.
 	-> TornsburgArea
@@ -15,7 +15,7 @@ n: Welcome te Tornsburg, {City3 == 1: stranger|{~friend|traveler}}. {City3 == 1:
 	-> IntroduceYourself
 + {IntroduceYourself} p: I want to make a business proposition.
 	-> Proposition
-+ p: Just passing through[], sorry to bother you.
++ p: Just passing through[.], sorry to bother you.
 	-> Exit
 
 = Exit
@@ -119,7 +119,7 @@ n: Ye need a steady supply of good coal to make steel.
 	* p: Coal is something I can provide[.], Gwuff Hills has already agreed to join our rail network.
 	* p: I think I have what you need[.], have you heard of Gruff Hills? We've already set up rail lines there.
 - n: Gwuff Hills! They've joined you already? Now that is an interesting fact...
-n: {City3BadExits < 1: Ha, this isn't yer first negotiation, is it!|Yer lucky to have such good tactics to make up for yer lack of tact.} People like ye know te come prepared already!
+n: {City3BadExits < 2: Ha, this isn't yer first negotiation, is it!|Yer lucky to have such good tactics to make up for yer lack of tact.} People like ye know te come prepared already!
 n: Alright, friend. If joining your network means access to coal, we can set up a steel industry right here in Tornsburg.
 ~ City3Complete = true
 -> END
