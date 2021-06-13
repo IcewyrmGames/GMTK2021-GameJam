@@ -64,7 +64,7 @@ n: "We are a city of simple farmers. Our plants need us, you see. We rely on eac
         n: "While I do admit they are quite sociable, I'm not sure they would like their air space intruded with the sounds and smells of transit. We must decline."
         -> HowCanIHelp
     ++ -> Unconvinced
-++ { City3Complete == true } p: "What would you say if we could help you streamline your food production?"
++ { City3Complete == true } p: "What would you say if we could help you streamline your food production?"
     -> StreamlineFoodProduction
 
 = Unconvinced
