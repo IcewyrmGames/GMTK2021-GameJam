@@ -28,7 +28,7 @@ VAR BeNiceToCity1Leader = 0
 VAR BeNiceToCity2Leader = 0
 VAR BeNiceToCity4Leader = 0
 
--> City2
+-> City1
 INCLUDE City1.ink
 INCLUDE City2.ink
 INCLUDE City3.ink

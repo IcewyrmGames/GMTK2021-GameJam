@@ -8,7 +8,6 @@ VAR ComplainedAboutFood = false
 = Touchdown
 s: Your ship touches down. This is it - the {City1Name}. 
 s: A lithe, anxious seeming middle aged man rushes to your door once you land, followed by a small flock of people. They turn gawk at the side of the ship, where "Trailway Railways & Trade" is painted boldly.
-
 n: Hello! Hello, how are you, how was the airspace, how are you doing - it is absolutely WONDEROUS to see you.
     * p: [Smile and reach for a handshake.] Hello there {City1Leader}. I see you are energetic as always!
       s: You grasp his hand warmly.
