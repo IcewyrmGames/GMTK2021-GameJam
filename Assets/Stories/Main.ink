@@ -11,14 +11,15 @@ VAR City6Visit = false
 VAR City5Conflict = false
 VAR City6Conflict = false
 
-VAR CompanyName = "Trailway Railways & Tradeways"
+VAR CompanyName = "Trailways Railways & Tradeways"
+// Technically the company is called Trailways and what they do is Railways and Tradeways.
 VAR PlanetName = "Nevosis"
 
 // City Details
 VAR City1Name = "Port of Nevosis" 
 VAR City1Leader = "Digby"
 VAR City2Name = "Gwuff Hills" 
-VAR City2Leader = "Elvira"
+VAR City2Leader = "Gula"
 VAR City4Name = "City of Whispering Seeds" 
 VAR City4Leader = "Elvira"
 
@@ -27,7 +28,7 @@ VAR BeNiceToCity1Leader = 0
 VAR BeNiceToCity2Leader = 0
 VAR BeNiceToCity4Leader = 0
 
--> City4
+-> City2
 INCLUDE City1.ink
 INCLUDE City2.ink
 INCLUDE City3.ink
@@ -49,3 +50,6 @@ City 3 Complete = {City1Complete}
 City 4 Complete = {City1Complete}
 City 5 Complete = {City1Complete}
 City 6 Complete = {City1Complete}
+
+=== function city1Niceness ===
+City 1 Leader Niceness Score: {BeNiceToCity1Leader}
