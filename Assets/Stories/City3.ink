@@ -41,7 +41,7 @@ n: We come from a world much less hospitable than this one. Fully of craggy ice 
 n: Any challenge that may arise, I assure you that we'll be more than capable of facing it.
 	* p: Impressive[!], you certainly look like people that can handle themselves.
 	* p: Incredible[!], it's hard to imagine coming from such a harsh place!
-	* p: Hard to believe[...] but I have no doubt that you are a capable people.
+	* p: Hard to believe[...], but I have no doubt that you are a capable people.
 - n: Indeed. What brings you around to these parts?
 	* p: I heard the stories about you[.], I'm glad to see the truth of them!
 	* p: I'm learning more about settlements in the area[.], thought I might take a look around.

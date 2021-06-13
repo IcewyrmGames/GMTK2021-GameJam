@@ -6,15 +6,15 @@ VAR City5BadExits = 0
 
 === City5 ===
 n: Ah, it seems we have a visitor on our doorstep. Is there something we can do for you?
-n: {City5 == 1: The name's Dellorithy, sweety. Welcome to the wonderful little village of Bridginggale.|{City5BadExits < 2 && !City6Complete:So nice to see you again here in Brigdinggale.|How nice of you to grace us with your presence.}}
+n: {City5 == 1: The name's Dellorithy, sweety. Welcome to the wonderful little village of Bridginggale.|{City5BadExits < 2 && !City6Complete:So nice to see you again here in Bridginggale.|How nice of you to grace us with your presence.}}
 n: {~We have bathhouses to wash off all that... I hope it's dirt.|If you're looking for a dentist, there may be one a few settlements over.|Are those what pass as shoes nowaways? One of our cobblers may have an opening.|Those tatters are an interesting fashion choice, or is that some kind of political statement?}
 ~ City5Visit = true
 -> MainQuestions
 
 = MainQuestions
-	* {!RepresentativeIntro} p: I represent Trailways Railways and Tradeways[.], madame.
+	* {!City6Complete} p: I represent Trailways Railways and Tradeways[.], madame.
 		-> RepresentativeIntro
-	* {!RepresentativeIntro && City6Complete && !HostileRepresentativeIntro} p: I represent Trailways Railways and Tradeways[.], madame.
+	* {City6Complete && !RepresentativeIntro} p: I represent Trailways Railways and Tradeways[.], madame.
 		-> HostileRepresentativeIntro
 	+ {!City6Complete && RepresentativeIntro} p: I wanted to check back in with you[.], madame.
 		-> RepresentativeConvince
@@ -26,7 +26,7 @@ n: {~We have bathhouses to wash off all that... I hope it's dirt.|If you're look
 		-> Robots
 	* {City6Complete && !Robots} p: What are all these robots everywhere?
 		-> HostileRobots
-	* {City6Visit} p: Dan in Mudwood said you have great taste[.], he thinks you are very fashionable.
+	* {City6Visit && City5Conflict} p: Dan in Mudwood said you have great taste[.], he thinks you are very fashionable.
 		-> DanFlustered
 	+ p: I think I should be going.
 	  n: Well, ta-ta for now{City5BadExits < 2 && !City6Complete:, safe travels!|.}

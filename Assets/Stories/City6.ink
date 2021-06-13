@@ -23,7 +23,7 @@ n: {City6 == 1: Dan's the name, Mudwood's muh home. What can I do fer ya?|What b
 		-> Gold
 	* {City5Complete && !Gold} p: Is there anything of note around here?
 		-> HostileGold
-	* {City5Visit} Dellorithy said you look mighty-fine in those overalls.
+	* {City5Visit && City6Conflict} p: Dellorithy said you look mighty-fine in those overalls.
 		-> DellorithyComplement
 	+ p: I'll be going[.], see you around.
 	  n: {City5Complete == false:Well don't be a stanger, you hear? Come back soon!|Yeah, see ya 'round.}
@@ -89,8 +89,8 @@ n: Oh yeah, and there's also all that gold around.
 	* p: I'm always looking to try new[ foods.], wait, did you say gold?
 - n: Yep, them lands around the river are just chock-full o' gold. You can't swing a stick without hittin' some.
 n: We dig it up around there sometimes. Well, when we ain't fightin' off the robots from Bridgey-gale.
-	* {City5Visit} p: What do you know about[ Bridginggale]... "Bridgey-gale"?
-	* {City5Visit} p: You have a problem with[ Bridginggale]... "Bridgey-gale"?
+	* {City5Visit} p: What do you know about[ Bridginggale?]... "Bridgey-gale"?
+	* {City5Visit} p: You have a problem with[ Bridginggale?]... "Bridgey-gale"?
 	* {!City5Visit} p: What's "Bridgey-gale"?
 	* {!City5Visit} p: Fighting? What are you talking about?
 - n: Oh, up in Bridgey-gale they got a lot of fancy-pants rich folks that use robots to do all their work.
