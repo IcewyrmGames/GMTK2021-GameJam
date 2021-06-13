@@ -1,9 +1,10 @@
 VAR ComplainedAboutFood = false
+VAR QuestionsGotAnswered = 0
 
 === City1 ===
 
 = Touchdown
-s: Your ship touches down. This is it - the {City1Name}. <\br> A lithe, anxious seeming middle aged man rushes to your door once you land, followed by a small flock of people. They turn gawk at the side of the ship, where "Trailway Railways & Trade" is painted boldly.
+s: Your ship touches down. This is it - the {City1Name}. <\br> A lithe, anxious seeming middle aged man rushes to your door once you land, followed by a small flock of people. They turn gawk at the side of the ship, where "{CompanyName}" is painted boldly.
 n: Hello! Hello, how are you, how was the airspace, how are you doing - it is absolutely WONDEROUS to see you.
     * p: [Smile and reach for a handshake.] Hello there {City1Leader}. I see you are energetic as always!
       s: You grasp his hand warmly.
@@ -41,13 +42,14 @@ n: It won't be long though! Perhaps next time we can try something else.
 -> QuestionsAndAnswers
 
 = QuestionsAndAnswers
-{QuestionsAndAnswers == 0: n: Well, speaking of next time, I know our time is short before you have to move on to work with the other settlements. Do you have any questions for me?}
-{QuestionsAndAnswers == 1: n: Do you have any more questions?}
-
+{ QuestionsGotAnswered == 0: n: Speaking of next time, I know our time is short before you have to move on to work with the other settlements. Do you have any questions for me?}
+{ QuestionsGotAnswered != 0: n: Do you have any more questions?}
+    ~ QuestionsGotAnswered++
 * p: What's the best way to convince the settlements to join us?
     n: Why, I'm sure everyone will be estatic to join your railway network. Why wouldn't they be?
-        ** p: I think if that were the case, we would have received more responses in our outreach...
-        n: Well, I'm sure they just need a little more convincing. I'm sure after a little conversation it will become clear what will make them say yes.
+        ** p: I think if that were the case, we would have received more responses in our outreach campaign...
+        ** p: That wasn't quite the impression I got based on our feedback.
+        -- n: Well, I'm sure they just need a little more convincing. I'm sure after a little conversation it will become clear what will make them say yes.
         -> QuestionsAndAnswers
 * p: Where did you get such a fine suit?
     n: Oh my. Why thank you. I have a wonderful tailor here, their name is Sherry, let me give you their card...
@@ -67,7 +69,7 @@ n: It won't be long though! Perhaps next time we can try something else.
 
 = CompleteCity
 
-s: After your meal, you have a quiet evening in one of {City1Leader}'s Apartment Pods to prepare for your next day of travels.
+s: After your meal, you have a quiet evening in one of {City1Leader}'s Premiere Apartment Pods (or PAP's) to prepare for your next day of travel.
 ~ City1Complete = true
 -> END
 

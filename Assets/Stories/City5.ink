@@ -77,12 +77,12 @@ n: Oh yes, still out here trying to join up the settlements, are you? I'm sorry,
 
 = HostileRepresentativeConvince
 n: Since you've decided to help prevent us from accessing the river, I don't think there's anything else we have to talk about.
-	* {City4Complete} What if you had a supply of cheap food?
+	* {City4Complete} p: What if you had a supply of cheap food?
 		-> FoodOffer
-	+ {!City4Complete} I'd like to help, but I'm not sure how.
+	+ {!City4Complete} p: I'd like to help, but I'm not sure how.
 	  n: Well, when you figure out how to right your mistake, then you can come and let us know.
 		-> END
-	+ I'm sorry, I'll leave you alone.
+	+ p: I'm sorry, I'll leave you alone.
 	  n: Please do.
 		-> END
 

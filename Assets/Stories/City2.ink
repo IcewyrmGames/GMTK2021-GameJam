@@ -1,5 +1,6 @@
 VAR HowManyTimes = 0
 VAR TurnedAwayCount = 0
+VAR QuestionsGotAnswered2 = 0
 
 === City2 ===
 { Entrance != 1 :
@@ -13,11 +14,13 @@ VAR TurnedAwayCount = 0
 s: You travel to the second settlement and are greeted by a gruff, grouchy looking woman.
 n: Greetings, crusty traveler. You must be from {CompanyName}. My name is Gula Gwuff.
 * p: That's right madam. I just finished a fine stay with {City1Leader} and made quick work of the trip here. It's a pleasure to meet you.
-n: Did you not receive our searing response that said we have no interest in your business here?
+* p: Greetings Gula! I have been looking forward to this occasion.
+* p: Did you say... crusty?
+- n: Did you not receive our searing response that said we have no interest in your business here?
 -> Persistance
 
 = Persistance
-* p: Yes, we heard. I thought perhaps an in-person visit would be regarded more warmly.
+* p: We thought perhaps an in-person visit would be regarded more warmly.
     n: Well, I fear you were as wrong as it is to have dinner for breakfast.
     p: No need to be salty about it.
     n: I prefer briny.
@@ -34,15 +37,19 @@ n: Did you not receive our searing response that said we have no interest in you
     ** p: It was definitely Moostac.
     -- s: She closes her eyes and nods. 
     n: Well, back to business.
-    -> QuestionsAndAnswers
+    ~ TurnedAwayCount++
+    -> TurnedAway
+
 * p: [Gape Awkwardly.] ...
     ~ TurnedAwayCount++
     -> TurnedAway
-* { TurnedAwayCount > 1} p: Yep, it's me.
++ { TurnedAwayCount > 2} p: {~ Yep, it's me.| Greetings, stranger! | We meet again.}
     -> QuestionsAndAnswers
+    
 = QuestionsAndAnswers
-{TurnedAway > 2:
+{QuestionsGotAnswered2 == 0:
     n: You just don't take no for an answer, do you. Fine, I will humor some questions. But don't get too sticky and think this means we will be joining your rail network.
+    ~ QuestionsGotAnswered2++
     - else: 
     n: {~ I suppose I can answer a few questions. | What do you have for me? | What would you like to know? }
     }
@@ -56,17 +63,28 @@ n: Did you not receive our searing response that said we have no interest in you
 * p: What can I do to sweeten the pot for you?
     ~ HowManyTimes++
     n: S-Sweeten the...  I told you we have no interest in joining, yes? Try again. 
-    ~ TurnedAwayCount++
-    -> TurnedAway
-* {HowManyTimes > 2} p: Do you happen to like... snacks?
-    n: There is no snack that deserves that title unless you are referring to... wait, what?
-    p: What snack?
-    n: Well, EARTH snacks, of course. 
-    p: What if we got you some... Earth snacks?
-    -> CompleteCity
+    -> QuestionsAndAnswers
+* {HowManyTimes > 2} p: Why does everything you say sound like you're describing food?
+    -> AboutThatFoodie
 * {City1.EarthSnacks} p: Perhaps we could throw in a steady supply of Earth Snacks to satiate your disinterest in joining. 
     -> CompleteCity
-    
+
+= AboutThatFoodie
+n: Describing food? Whatever do you mean?
+* p: It's like an obsession. Crispy, salty, food-whatever-y. 
+* p: The way you describe things makes me feel oddly uncomfortable. 
+- n: I think my snackscriptions are perfectly appropriate.
+* p: Snack...scriptions?
+* p: Snack got your tongue?
+- n: There is no snack that deserves that title unless you are referring to... Ahem. Wait, what?
+* p: What snack?
+- n: Well, you know, there are snacks from that one place, away from here... 
+* p: Are you talking about... Earth? Like, Earth Snacks?
+- s: She starts to salivate.
+* p: What if we got you some... Earth snacks?
+* p: We hereby announce we are the official distributor of SNACKS FROM EARTH.
+- -> CompleteCity
+
 = AboutCity2
     n: Gwuff Hills, yes. Well. You see that we are surrounded by a delicate ring of mountains. I've have you know we are the number one server of coal in the area.
     -> QuestionsAndAnswers
