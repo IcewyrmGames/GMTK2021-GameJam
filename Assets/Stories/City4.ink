@@ -39,7 +39,7 @@ n: Of course. Can't you hear them?
 s: She closes her eyes, raising her chin slightly.
 + p: How... nice.
 ~ BeNiceToCity4Leader--
-+ p: "Thank you! I'm happy to be here."
++ p: Thank you! I'm happy to be here.
 ~ BeNiceToCity4Leader++
 - -> HowCanIHelp
 
