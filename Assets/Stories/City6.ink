@@ -61,10 +61,15 @@ If yer working with them, I don't see how we can see eye-to-eye on nothin'.
 
 = RepresentativeConvince
 n: Like I was tellin' ya before, I don't see that we'd be needing anything fancy like that any time soon.
-	* {City6Conflict} p: What if I could help with the river?
+	* {City6Conflict && City5Conflict} p: What if I could help with the river?
 		-> RiverOffer
 	+ {RiverOffer} p: The company will help you with the river.
 		-> RiverOfferConfirm
+	+ p: You could trade with the other settlements[.], to get things you need.
+	  n: Nah, I reckon we're doing alright. What kind of stuff would we get, anyways?<\br><>
+	  Don't need coal, we got plenty of peat to burn. Don't need steel, we ain't some kind of factory over here.<\br><>
+	  'Sides, we put together what we need from what we got. Re-duce, re-use, re-cycle, as they always say.
+		-> MainQuestions
 	+ p: But you have to join[.], everyone else is doing it.
 	  n: We ain't gotta do nothin', city-slicker. You best be movin' on.
 		-> END

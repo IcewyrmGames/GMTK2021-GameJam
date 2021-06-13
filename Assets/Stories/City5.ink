@@ -60,10 +60,14 @@ The gold from that river was what sustained our way of life here. You've ruined 
 
 = RepresentativeConvince
 n: Oh yes, still out here trying to join up the settlements, are you? I'm sorry, but we're still not interested.
-	* {City5Conflict} p: What if I could help with the river?
+	* {City5Conflict && City6Conflict} p: What if I could help with the river?
 		-> RiverOffer
 	* {RiverOffer} p: The company will help you with the river.
 		-> RiverOfferConfirm
+	+ p: The trade network will allow you to trade with the other settlements[.], they may have something you need.
+	  n: Oh please, sweetie, now you're going to make me laugh. What kind of things could we get from the rinky-dink towns around here?<\br><>
+	  We're much better off trading with our offworld contacts, which we can do quite easily from our own city.
+	  	-> MainQuestions
 	+ p: Are you sure you don't want to join?
 	  n: I am quite sure, I assure you. We have no need for this rail network. Now if you'll excuse me, I have other matters to attend to.
 	  ~ City5BadExits++
