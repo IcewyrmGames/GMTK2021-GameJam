@@ -31,6 +31,7 @@ public class Settlement : MonoBehaviour {
 
 	[SerializeField] string linkedStitch;
 	[SerializeField] string linkedVariable;
+	[SerializeField] Sprite characterSprite;
 
 	[SerializeField] SettlementState initialState;
 
@@ -85,6 +86,9 @@ public class Settlement : MonoBehaviour {
 	void OnMouseDown() {
 		if (enabled && state == SettlementState.Available && !string.IsNullOrEmpty(linkedStitch)) {
 			IceWyrm.StoryReader.instance.JumpToStitch(linkedStitch);
+			if (CharacterImage.instance) {
+				CharacterImage.instance.SetCharacter(characterSprite);
+			}
 		}
 	}
 
