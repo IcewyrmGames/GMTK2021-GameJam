@@ -1,7 +1,7 @@
 VAR City3BadExits = 0
 
 === City3 ===
-n: Welcome te Tornsburg, {City3 == 1: stranger|{~friend|traveler}}. {City3 == 1: The names Bilge. }What can I do for ye? -> MainQuestions
+n: Welcome te Tornsburg, {City3 == 1: stranger|{~friend|traveler}}. {City3 == 1: The name's Bilge. }What can I do for ye? -> MainQuestions
 
 = MainQuestions
 <>
